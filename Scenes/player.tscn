@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://17xuxt1qmxl8"]
+
+[ext_resource type="Texture2D" uid="uid://coda0mxo13vsr" path="res://Textures/circle.png" id="1_oy8mo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0pr4b"]
+radius = 3.16228
+
+[node name="Head" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0pr4b")
+
+[node name="Pepsi" type="Sprite2D" parent="."]
+position = Vector2(0.99375, 0.99375)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_oy8mo")

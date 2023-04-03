@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cagl82gy4n6yp"]
+
+[ext_resource type="Script" path="res://Scripts/tail.gd" id="1_77g0u"]
+[ext_resource type="Texture2D" uid="uid://n8e46j8abpgo" path="res://Textures/square.png" id="2_onbri"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h6gbs"]
+size = Vector2(640, 555)
+
+[node name="Tail" type="Area2D"]
+scale = Vector2(0.025, 0.025)
+script = ExtResource("1_77g0u")
+
+[node name="Pepsi" type="Sprite2D" parent="."]
+scale = Vector2(9.16, 9.16)
+texture = ExtResource("2_onbri")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_h6gbs")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
