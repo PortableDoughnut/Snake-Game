@@ -1,16 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://17xuxt1qmxl8"]
+[gd_scene load_steps=4 format=3 uid="uid://d3h8c35wx3bf"]
 
-[ext_resource type="Texture2D" uid="uid://coda0mxo13vsr" path="res://Textures/circle.png" id="1_oy8mo"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_bs6mg"]
+[ext_resource type="Texture2D" uid="uid://xsft6abkpnfl" path="res://Textures/Head.png" id="2_kmjqx"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_0pr4b"]
-radius = 3.16228
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rp8i6"]
 
 [node name="Head" type="Area2D"]
+script = ExtResource("1_bs6mg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_0pr4b")
+shape = SubResource("RectangleShape2D_rp8i6")
 
-[node name="Pepsi" type="Sprite2D" parent="."]
+[node name="Head" type="Sprite2D" parent="."]
 position = Vector2(0.99375, 0.99375)
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_oy8mo")
+texture = ExtResource("2_kmjqx")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

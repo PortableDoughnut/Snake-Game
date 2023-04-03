@@ -29,7 +29,3 @@ func spawn_new():
 	score += 5
 	add_food()
 	get_node("Snake").add_tail()
-
-#func menu():
-#	if Input.is_action_pressed("ui_menu"):
-#		get_tree().change_scene_to_file("res://Scenes/pause.tscn")

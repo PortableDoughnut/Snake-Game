@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3c8bajkoxjf3"
-path="res://.godot/imported/Pepsi.png-0847679b5269aace26115888bc559bae.ctex"
+uid="uid://db12rpcqcu6pn"
+path="res://.godot/imported/Tail.png-e7114b2a60c81f981d9e76e1c092ea44.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Pepsi.png"
-dest_files=["res://.godot/imported/Pepsi.png-0847679b5269aace26115888bc559bae.ctex"]
+source_file="res://Textures/Tail.png"
+dest_files=["res://.godot/imported/Tail.png-e7114b2a60c81f981d9e76e1c092ea44.ctex"]
 
 [params]
 

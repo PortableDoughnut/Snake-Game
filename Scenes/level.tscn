@@ -1,10 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://baj4epwr8rbqn"]
+[gd_scene load_steps=10 format=3 uid="uid://baj4epwr8rbqn"]
 
 [ext_resource type="Script" path="res://Scripts/Level.gd" id="1_cf1rb"]
 [ext_resource type="PackedScene" uid="uid://dv5362npbppok" path="res://Scenes/snake.tscn" id="2_bipoi"]
 [ext_resource type="AudioStream" uid="uid://dnovmd7rlnac8" path="res://Sound/Moonlight.wav" id="4_dd1j7"]
 [ext_resource type="AudioStream" uid="uid://c4typy84yqyc5" path="res://Sound/bloop.wav" id="5_7evrn"]
 [ext_resource type="PackedScene" uid="uid://c24m35wnqlayb" path="res://Scenes/overlay.tscn" id="5_nyfmg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qqwwp"]
+size = Vector2(1330, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ufihu"]
+size = Vector2(1194, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yekd7"]
+size = Vector2(650, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_45ox5"]
+size = Vector2(690, 20)
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_cf1rb")
@@ -28,3 +40,23 @@ stream = ExtResource("4_dd1j7")
 stream = ExtResource("5_7evrn")
 
 [node name="Overlay" parent="." instance=ExtResource("5_nyfmg")]
+
+[node name="Boundary" type="Area2D" parent="."]
+
+[node name="TopCollision" type="CollisionShape2D" parent="Boundary"]
+position = Vector2(655, -24)
+shape = SubResource("RectangleShape2D_qqwwp")
+
+[node name="BottomCollision" type="CollisionShape2D" parent="Boundary"]
+position = Vector2(587, 664)
+shape = SubResource("RectangleShape2D_ufihu")
+
+[node name="LeftCollision" type="CollisionShape2D" parent="Boundary"]
+position = Vector2(-23.9993, 323)
+rotation = 1.57079
+shape = SubResource("RectangleShape2D_yekd7")
+
+[node name="RightCollision" type="CollisionShape2D" parent="Boundary"]
+position = Vector2(1176, 327)
+rotation = 1.57079
+shape = SubResource("RectangleShape2D_45ox5")
