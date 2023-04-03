@@ -28,3 +28,5 @@ func set_is_paused(value):
 
 func _on_resume_pressed():
 	self.is_paused = false
+
+#test
