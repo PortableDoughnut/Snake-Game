@@ -10,7 +10,7 @@ func _ready():
 
 
 
-func _process(delta):
+func _process(_delta):
 	position += cur_dir/2
 	if directions.size() > 0:
 		if(position == position_array[0]):

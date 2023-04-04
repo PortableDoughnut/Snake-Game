@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://bsk3lyknaqjgw"]
 
 [ext_resource type="Script" path="res://Scripts/snake.gd" id="1_3w2cv"]
 [ext_resource type="PackedScene" uid="uid://17xuxt1qmxl8" path="res://Scenes/player.tscn" id="2_0y7xp"]
@@ -7,3 +7,5 @@
 script = ExtResource("1_3w2cv")
 
 [node name="Head" parent="." instance=ExtResource("2_0y7xp")]
+
+[connection signal="area_entered" from="Head" to="." method="_on_head_area_entered"]

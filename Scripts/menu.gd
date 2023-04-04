@@ -9,12 +9,7 @@ var options
 func _ready():
 	options = options_preload.instantiate()
 	options.connect("options_back", options_back)
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
+	
 
 func _on_play_pressed():
 	get_tree().change_scene_to_file("res://Scenes/level.tscn")

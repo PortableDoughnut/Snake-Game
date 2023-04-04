@@ -30,7 +30,7 @@ func start_music():
 	music.play()
 
 # The _process function is called every frame, with 'delta' being the time since the last frame.
-func _process(delta):
+func _process(_delta):
 	# Update the score text in the 'Overlay' node.
 	$Overlay/Score.text = "Points: " + (str(score))
 
@@ -43,7 +43,7 @@ func add_food():
 	# Connect the 'Food_used' signal to the 'spawn_new' function.
 	instance.connect("Food_used", spawn_new)
 	# Add the food instance as a child of this node.
-	add_child(instance)
+	call_deferred("add_child", instance)
 	# Play the 'eat' sound effect.
 	eat.play()
 

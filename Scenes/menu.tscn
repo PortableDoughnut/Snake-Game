@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=4 format=3 uid="uid://b855si1mt2yps"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_br40x"]
 [ext_resource type="Theme" uid="uid://cefftfa4uuoua" path="res://menuTheme.tres" id="3_8vw5f"]
-[ext_resource type="Script" path="res://Scripts/Button.gd" id="3_ibhj6"]
+
+[sub_resource type="GDScript" id="GDScript_40x0y"]
+script/source = "extends Button
+"
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_br40x")
@@ -46,7 +49,7 @@ layout_mode = 2
 theme = ExtResource("3_8vw5f")
 keep_pressed_outside = true
 text = "Play"
-script = ExtResource("3_ibhj6")
+script = SubResource("GDScript_40x0y")
 
 [node name="OptionsMargin" type="MarginContainer" parent="MenuCenter/MenuVBox/ButtonVBox"]
 layout_mode = 2
@@ -67,8 +70,7 @@ layout_mode = 2
 theme = ExtResource("3_8vw5f")
 text = "Quit"
 
-[connection signal="pressed" from="MenuCenter/MenuVBox/ButtonVBox/PlayMargin/Play" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="MenuCenter/MenuVBox/ButtonVBox/PlayMargin/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MenuCenter/MenuVBox/ButtonVBox/OptionsMargin/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="MenuCenter/MenuVBox/ButtonVBox/QuitMargin/Quit" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="MenuCenter/MenuVBox/ButtonVBox/QuitMargin/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="MenuCenter/MenuVBox/ButtonVBox/QuitMargin/Quit" to="." method="_on_button_pressed"]

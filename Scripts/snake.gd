@@ -10,7 +10,7 @@ var previous_direction = Vector2(1, 0)
 func _ready():
 	pass
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("ui_up") and direction != Vector2(0, 5):
 		direction = Vector2(0, -5)
 	elif Input.is_action_just_pressed("ui_down") and direction != Vector2(0, -5):
@@ -46,4 +46,9 @@ func add_tail():
 	else:
 		instance.cur_dir = direction
 		instance.position = previous_tail.position + direction * gap
-	add_child(instance)
+	call_deferred("add_child", instance)
+
+
+func _on_head_area_entered(area):
+	if area.name == "Boundary":
+		get_tree().reload_current_scene()

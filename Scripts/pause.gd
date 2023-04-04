@@ -11,9 +11,6 @@ func _ready():
 	options.connect("options_back", options_back)
 
 
-func _process(delta):
-	pass
-
 
 func _on_quit_pressed():
 	get_tree().quit()
