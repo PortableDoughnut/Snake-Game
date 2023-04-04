@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=4 format=3 uid="uid://vlvnqojprvou"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_br40x"]
 [ext_resource type="Theme" uid="uid://cefftfa4uuoua" path="res://menuTheme.tres" id="3_8vw5f"]
@@ -10,18 +10,19 @@ script = ExtResource("1_br40x")
 [node name="Background" type="ColorRect" parent="."]
 offset_right = 1152.0
 offset_bottom = 648.0
+theme = ExtResource("3_8vw5f")
 color = Color(0.435294, 0.658824, 1, 1)
 
-[node name="MenuMargin" type="MarginContainer" parent="."]
+[node name="MenuCenter" type="CenterContainer" parent="."]
 offset_right = 1144.0
 offset_bottom = 640.0
 theme = ExtResource("3_8vw5f")
 
-[node name="MenuVBox" type="VBoxContainer" parent="MenuMargin"]
+[node name="MenuVBox" type="VBoxContainer" parent="MenuCenter"]
 layout_mode = 2
 theme = ExtResource("3_8vw5f")
 
-[node name="Title" type="Label" parent="MenuMargin/MenuVBox"]
+[node name="Title" type="Label" parent="MenuCenter/MenuVBox"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("3_8vw5f")
@@ -30,33 +31,34 @@ text = "Snake Game
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ButtonVBox" type="VBoxContainer" parent="MenuMargin/MenuVBox"]
+[node name="ButtonVBox" type="VBoxContainer" parent="MenuCenter/MenuVBox"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("3_8vw5f")
 
-[node name="PlayMargin" type="MarginContainer" parent="MenuMargin/MenuVBox/ButtonVBox"]
+[node name="PlayMargin" type="MarginContainer" parent="MenuCenter/MenuVBox/ButtonVBox"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("3_8vw5f")
 
-[node name="Play" type="Button" parent="MenuMargin/MenuVBox/ButtonVBox/PlayMargin"]
+[node name="Play" type="Button" parent="MenuCenter/MenuVBox/ButtonVBox/PlayMargin"]
 layout_mode = 2
+theme = ExtResource("3_8vw5f")
 keep_pressed_outside = true
 text = "Play"
 script = ExtResource("3_ibhj6")
 
-[node name="QuitMargin" type="MarginContainer" parent="MenuMargin/MenuVBox/ButtonVBox"]
+[node name="QuitMargin" type="MarginContainer" parent="MenuCenter/MenuVBox/ButtonVBox"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("3_8vw5f")
 
-[node name="Quit" type="Button" parent="MenuMargin/MenuVBox/ButtonVBox/QuitMargin"]
+[node name="Quit" type="Button" parent="MenuCenter/MenuVBox/ButtonVBox/QuitMargin"]
 layout_mode = 2
 theme = ExtResource("3_8vw5f")
 text = "Quit"
 
-[connection signal="pressed" from="MenuMargin/MenuVBox/ButtonVBox/PlayMargin/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="MenuMargin/MenuVBox/ButtonVBox/PlayMargin/Play" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="MenuMargin/MenuVBox/ButtonVBox/QuitMargin/Quit" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="MenuMargin/MenuVBox/ButtonVBox/QuitMargin/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="MenuCenter/MenuVBox/ButtonVBox/PlayMargin/Play" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MenuCenter/MenuVBox/ButtonVBox/PlayMargin/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MenuCenter/MenuVBox/ButtonVBox/QuitMargin/Quit" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MenuCenter/MenuVBox/ButtonVBox/QuitMargin/Quit" to="." method="_on_quit_pressed"]
