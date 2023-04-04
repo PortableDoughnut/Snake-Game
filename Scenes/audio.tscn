@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dctswwnb8f33m"]
+
+[ext_resource type="AudioStream" uid="uid://dnovmd7rlnac8" path="res://Sound/Moonlight.wav" id="1_mgwkx"]
+[ext_resource type="AudioStream" uid="uid://c4typy84yqyc5" path="res://Sound/bloop.wav" id="2_k5ahd"]
+
+[node name="Audio" type="Node"]
+
+[node name="Moonlight" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_mgwkx")
+
+[node name="Bloop" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_k5ahd")
