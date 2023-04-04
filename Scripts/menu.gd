@@ -1,12 +1,15 @@
 extends Node2D
 
+const OPTIONS = preload("res://Scenes/options.tscn")
 
-# Called when the node enters the scene tree for the first time.
+var options
+
+
 func _ready():
-	pass # Replace with function body.
+	options = OPTIONS.instantiate()
+	options.connect("go_back", options_back)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
@@ -17,3 +20,11 @@ func _on_play_pressed():
 
 func _on_quit_pressed():
 	get_tree().quit()
+
+
+func _on_options_pressed():
+	add_child(options)
+
+
+func options_back():
+	remove_child(options)

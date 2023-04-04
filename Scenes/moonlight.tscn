@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqsa14ivw234v"]
+
+[ext_resource type="AudioStream" uid="uid://dnovmd7rlnac8" path="res://Sound/Moonlight.wav" id="1_2uwjl"]
+
+[node name="Moonlight" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_2uwjl")
+bus = &"Music"

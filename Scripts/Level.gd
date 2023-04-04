@@ -16,7 +16,6 @@ func start_music():
 
 func _process(delta):
 	$Overlay/Score.text = "Points: " + (str(score))
-	#menu()
 	
 func add_food():
 	var instance = food.instantiate()

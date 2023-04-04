@@ -1,10 +1,14 @@
 extends Control
 
+const OPTIONS = preload("res://Scenes/options.tscn")
+
 var is_paused = false : set = set_is_paused
+var options
 
 
 func _ready():
-	pass
+	options = OPTIONS.instantiate()
+	options.connect("go_back", options_back)
 
 
 func _process(delta):
@@ -28,3 +32,10 @@ func _on_resume_pressed():
 
 func _on_quit_pressed():
 	get_tree().quit()
+
+
+func _on_options_pressed():
+	add_child(options)
+
+func options_back():
+	remove_child(options)

@@ -7,8 +7,6 @@ var previous_direction = Vector2(1, 0)
 
 @onready var tail = preload("res://Scenes/tail.tscn")
 
-func _ready():
-	pass
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_up") and direction != Vector2(0, 5):
@@ -31,7 +29,6 @@ func move_snake():
 		direction_change = true
 	if direction_change:
 		for i in range(1, get_child_count()):
-			# Rename the method to add_tail_part
 			get_child(i).add_tail_part(head_position, direction)
 
 func add_tail():

@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://cefftfa4uuoua"]
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://cefftfa4uuoua"]
 
 [ext_resource type="FontFile" uid="uid://4aiy68hhb1ta" path="res://Fonts/NewRodin/NewRodin.otf" id="1_ct1c5"]
 
@@ -12,6 +12,12 @@ vertical = true
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3e2nv"]
 bg_color = Color(0.470588, 0.388235, 1, 1)
 
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_fhf8l"]
+color = Color(0.470588, 0.388235, 1, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ysptk"]
+color = Color(0.352941, 0.427451, 0.909804, 1)
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f2yl1"]
 
 [resource]
@@ -21,6 +27,9 @@ Button/font_sizes/font_size = 50
 Button/styles/hover = SubResource("StyleBoxLine_2ruk6")
 Button/styles/normal = SubResource("StyleBoxEmpty_hiok2")
 Button/styles/pressed = SubResource("StyleBoxFlat_3e2nv")
+CheckButton/font_sizes/font_size = 40
+HSlider/styles/grabber_area = SubResource("StyleBoxLine_fhf8l")
+HSlider/styles/slider = SubResource("StyleBoxLine_ysptk")
 Label/colors/font_outline_color = Color(0.352941, 0.72549, 0.909804, 1)
 Label/constants/outline_size = 2
 Label/font_sizes/font_size = 50

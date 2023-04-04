@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://du1a8r6ua4blc"]
 
-[ext_resource type="Script" path="res://Scripts/pause.gd" id="1_fn5m5"]
+[ext_resource type="Script" path="res://Scripts/pause.gd" id="1_birn2"]
 [ext_resource type="Theme" uid="uid://cefftfa4uuoua" path="res://menuTheme.tres" id="1_id2ur"]
 
 [node name="Pause" type="Control"]
@@ -8,7 +8,7 @@ process_mode = 3
 visible = false
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_fn5m5")
+script = ExtResource("1_birn2")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 0
@@ -45,6 +45,11 @@ size_flags_vertical = 3
 theme = ExtResource("1_id2ur")
 text = "Resume"
 
+[node name="Options" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_id2ur")
+text = "Options"
+
 [node name="Quit" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -52,4 +57,5 @@ theme = ExtResource("1_id2ur")
 text = "Quit"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

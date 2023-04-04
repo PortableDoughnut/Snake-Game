@@ -13,7 +13,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	position += cur_dir/2
-	print("position is " + str(position))
 	if directions.size() > 0:
 		if(position == position_array[0]):
 			cur_dir = directions[0]

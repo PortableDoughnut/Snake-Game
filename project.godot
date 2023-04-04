@@ -13,12 +13,13 @@ config_version=5
 config/name="Snake Game"
 run/main_scene="res://Scenes/menu.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
+boot_splash/image="res://Textures/BTS.jpg"
 config/icon="res://Textures/Pepsi.png"
 
 [display]
 
 window/size/resizable=false
-window/stretch/aspect="expand"
+window/stretch/mode="canvas_items"
 
 [editor]
 
