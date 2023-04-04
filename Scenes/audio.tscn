@@ -7,6 +7,7 @@
 
 [node name="Moonlight" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("1_mgwkx")
+bus = &"Music"
 
 [node name="Bloop" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_k5ahd")

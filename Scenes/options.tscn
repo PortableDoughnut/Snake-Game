@@ -1,10 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://dw16mdclbfdh5"]
+[gd_scene load_steps=4 format=3 uid="uid://b6g31bhsykmv7"]
 
 [ext_resource type="Theme" uid="uid://cefftfa4uuoua" path="res://menuTheme.tres" id="1_k0347"]
-[ext_resource type="Script" path="res://Scripts/options.gd" id="1_mmah3"]
+[ext_resource type="Script" path="res://Scripts/options.gd" id="1_ugqb1"]
+[ext_resource type="Script" path="res://Scripts/AudioMargin.gd" id="3_qswxd"]
 
 [node name="Options" type="CanvasLayer"]
-script = ExtResource("1_mmah3")
+script = ExtResource("1_ugqb1")
 
 [node name="Background" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -33,6 +34,51 @@ layout_mode = 2
 theme = ExtResource("1_k0347")
 text = "Options"
 
+[node name="AudioMargin" type="MarginContainer" parent="Background/CenterContainer/MarginContainer/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("3_qswxd")
+label = "Music"
+bus_name = "Music"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/CenterContainer/MarginContainer/VBox/AudioMargin"]
+layout_mode = 2
+theme = ExtResource("1_k0347")
+theme_override_constants/separation = 0
+
+[node name="AudioLabel" type="Label" parent="Background/CenterContainer/MarginContainer/VBox/AudioMargin/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_k0347")
+theme_override_font_sizes/font_size = 30
+text = "Audio"
+
+[node name="Volume" type="HSlider" parent="Background/CenterContainer/MarginContainer/VBox/AudioMargin/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme = ExtResource("1_k0347")
+min_value = -30.0
+
+[node name="AudioHBox" type="HBoxContainer" parent="Background/CenterContainer/MarginContainer/VBox/AudioMargin/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_k0347")
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Play" type="Button" parent="Background/CenterContainer/MarginContainer/VBox/AudioMargin/VBoxContainer/AudioHBox"]
+layout_mode = 2
+theme = ExtResource("1_k0347")
+theme_override_font_sizes/font_size = 15
+text = "Play"
+
+[node name="Stop" type="Button" parent="Background/CenterContainer/MarginContainer/VBox/AudioMargin/VBoxContainer/AudioHBox"]
+layout_mode = 2
+theme = ExtResource("1_k0347")
+theme_override_font_sizes/font_size = 15
+text = "Stop"
+
+[node name="FullscreenMargin" type="MarginContainer" parent="Background/CenterContainer/MarginContainer/VBox"]
+layout_mode = 2
+
 [node name="BackMargin" type="MarginContainer" parent="Background/CenterContainer/MarginContainer/VBox"]
 layout_mode = 2
 theme = ExtResource("1_k0347")
@@ -42,4 +88,7 @@ layout_mode = 2
 theme = ExtResource("1_k0347")
 text = "Back"
 
+[connection signal="value_changed" from="Background/CenterContainer/MarginContainer/VBox/AudioMargin/VBoxContainer/Volume" to="Background/CenterContainer/MarginContainer/VBox/AudioMargin" method="_on_volume_value_changed"]
+[connection signal="pressed" from="Background/CenterContainer/MarginContainer/VBox/AudioMargin/VBoxContainer/AudioHBox/Play" to="Background/CenterContainer/MarginContainer/VBox/AudioMargin" method="_on_play_pressed"]
+[connection signal="pressed" from="Background/CenterContainer/MarginContainer/VBox/AudioMargin/VBoxContainer/AudioHBox/Stop" to="Background/CenterContainer/MarginContainer/VBox/AudioMargin" method="_on_stop_pressed"]
 [connection signal="pressed" from="Background/CenterContainer/MarginContainer/VBox/BackMargin/Back" to="." method="_on_back_pressed"]
