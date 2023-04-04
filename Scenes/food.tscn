@@ -1,20 +1,20 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=4 format=3 uid="uid://p0snnw47438t"]
 
-[ext_resource type="Script" path="res://Scripts/Gear.gd" id="1_u3o41"]
+[ext_resource type="Script" path="res://Scripts/Gear.gd" id="1_iq1ey"]
 [ext_resource type="Texture2D" uid="uid://choq0nln3uuih" path="res://Textures/food.png" id="2_3isiv"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_y3g5k"]
-radius = 27.074
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ryc05"]
+size = Vector2(35, 35)
 
 [node name="Food" type="Area2D"]
-script = ExtResource("1_u3o41")
+script = ExtResource("1_iq1ey")
 
-[node name="Starbucks" type="Sprite2D" parent="."]
-position = Vector2(-1.90735e-06, -1.90735e-06)
-scale = Vector2(0.379375, 0.379375)
+[node name="FoodSprite" type="Sprite2D" parent="."]
+position = Vector2(-9.53674e-07, -9.53674e-07)
+scale = Vector2(0.177344, 0.177344)
 texture = ExtResource("2_3isiv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_y3g5k")
+shape = SubResource("RectangleShape2D_ryc05")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

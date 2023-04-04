@@ -14,7 +14,6 @@ config/name="Snake Game"
 run/main_scene="res://Scenes/menu.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 boot_splash/show_image=false
-config/icon="res://Textures/Pepsi.png"
 
 [display]
 

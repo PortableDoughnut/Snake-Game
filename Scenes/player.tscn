@@ -2,15 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://coda0mxo13vsr" path="res://Textures/circle.png" id="1_oy8mo"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_0pr4b"]
-radius = 3.16228
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t8ja7"]
 
 [node name="Head" type="Area2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_0pr4b")
+shape = SubResource("RectangleShape2D_t8ja7")
 
-[node name="Pepsi" type="Sprite2D" parent="."]
-position = Vector2(0.99375, 0.99375)
-scale = Vector2(0.25, 0.25)
+[node name="Head" type="Sprite2D" parent="."]
+scale = Vector2(0.205031, 0.205031)
 texture = ExtResource("1_oy8mo")
