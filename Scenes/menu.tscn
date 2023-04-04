@@ -48,6 +48,15 @@ keep_pressed_outside = true
 text = "Play"
 script = ExtResource("3_ibhj6")
 
+[node name="OptionsMargin" type="MarginContainer" parent="MenuCenter/MenuVBox/ButtonVBox"]
+layout_mode = 2
+theme = ExtResource("3_8vw5f")
+
+[node name="Options" type="Button" parent="MenuCenter/MenuVBox/ButtonVBox/OptionsMargin"]
+layout_mode = 2
+theme = ExtResource("3_8vw5f")
+text = "Options"
+
 [node name="QuitMargin" type="MarginContainer" parent="MenuCenter/MenuVBox/ButtonVBox"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -60,5 +69,6 @@ text = "Quit"
 
 [connection signal="pressed" from="MenuCenter/MenuVBox/ButtonVBox/PlayMargin/Play" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="MenuCenter/MenuVBox/ButtonVBox/PlayMargin/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MenuCenter/MenuVBox/ButtonVBox/OptionsMargin/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MenuCenter/MenuVBox/ButtonVBox/QuitMargin/Quit" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="MenuCenter/MenuVBox/ButtonVBox/QuitMargin/Quit" to="." method="_on_quit_pressed"]
