@@ -1,10 +1,14 @@
 extends Control
 
+@onready var options_preload = preload("res://Scenes/options.tscn")
+
+var options
 var is_paused = false : set = set_is_paused
 
 
 func _ready():
-	pass
+	options = options_preload.instantiate()
+	options.connect("options_back", options_back)
 
 
 func _process(delta):
@@ -30,3 +34,11 @@ func _on_resume_pressed():
 	self.is_paused = false
 
 #test
+
+
+func _on_options_pressed():
+	add_child(options)
+
+func options_back():
+	remove_child(options)
+

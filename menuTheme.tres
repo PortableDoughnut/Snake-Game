@@ -17,6 +17,7 @@ bg_color = Color(0.470588, 0.388235, 1, 1)
 [resource]
 default_font = ExtResource("1_ct1c5")
 default_font_size = 20
+Button/colors/font_color = Color(1, 1, 1, 1)
 Button/font_sizes/font_size = 50
 Button/styles/hover = SubResource("StyleBoxLine_2ruk6")
 Button/styles/normal = SubResource("StyleBoxEmpty_hiok2")
