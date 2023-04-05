@@ -1,0 +1,136 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp6hkjn06u0t5"]
+
+[ext_resource type="Theme" uid="uid://cefftfa4uuoua" path="res://menuTheme.tres" id="1_0bdnl"]
+[ext_resource type="Script" path="res://Scripts/Slot1.gd" id="2_nukix"]
+
+[node name="Inventory" type="Node2D"]
+
+[node name="TextureRect" type="ColorRect" parent="."]
+offset_left = 304.0
+offset_top = 112.0
+offset_right = 912.0
+offset_bottom = 488.0
+color = Color(0.470588, 0.388235, 1, 1)
+
+[node name="GridContainer" type="GridContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 448.0
+offset_top = 217.0
+offset_right = 768.0
+offset_bottom = 375.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_0bdnl")
+columns = 6
+
+[node name="Slot1" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme = ExtResource("1_0bdnl")
+script = ExtResource("2_nukix")
+
+[node name="Slot2" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme = ExtResource("1_0bdnl")
+script = ExtResource("2_nukix")
+
+[node name="Slot3" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme = ExtResource("1_0bdnl")
+script = ExtResource("2_nukix")
+
+[node name="Slot4" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme = ExtResource("1_0bdnl")
+script = ExtResource("2_nukix")
+
+[node name="Slot5" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme = ExtResource("1_0bdnl")
+script = ExtResource("2_nukix")
+
+[node name="Slot6" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme = ExtResource("1_0bdnl")
+script = ExtResource("2_nukix")
+
+[node name="Slot7" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme = ExtResource("1_0bdnl")
+script = ExtResource("2_nukix")
+
+[node name="Slot8" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme = ExtResource("1_0bdnl")
+script = ExtResource("2_nukix")
+
+[node name="Slot9" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme = ExtResource("1_0bdnl")
+script = ExtResource("2_nukix")
+
+[node name="Slot10" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme = ExtResource("1_0bdnl")
+script = ExtResource("2_nukix")
+
+[node name="Slot11" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme = ExtResource("1_0bdnl")
+script = ExtResource("2_nukix")
+
+[node name="Slot12" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme = ExtResource("1_0bdnl")
+script = ExtResource("2_nukix")
+
+[node name="Slot13" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme = ExtResource("1_0bdnl")
+script = ExtResource("2_nukix")
+
+[node name="Slot14" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme = ExtResource("1_0bdnl")
+script = ExtResource("2_nukix")
+
+[node name="Slot15" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme = ExtResource("1_0bdnl")
+script = ExtResource("2_nukix")
+
+[node name="Slot16" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme = ExtResource("1_0bdnl")
+script = ExtResource("2_nukix")
+
+[node name="Slot17" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme = ExtResource("1_0bdnl")
+script = ExtResource("2_nukix")
+
+[node name="Slot18" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme = ExtResource("1_0bdnl")
+script = ExtResource("2_nukix")
