@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/profile.gd" id="1_nnlqi"]
 
 [node name="Profile" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_nnlqi")

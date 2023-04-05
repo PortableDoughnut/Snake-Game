@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bo7drj1fxk4ii"]
+[gd_scene load_steps=5 format=3 uid="uid://bo7drj1fxk4ii"]
 
 [ext_resource type="Theme" uid="uid://cefftfa4uuoua" path="res://menuTheme.tres" id="1_8fwxq"]
 [ext_resource type="FontFile" uid="uid://4aiy68hhb1ta" path="res://Fonts/NewRodin/NewRodin.otf" id="1_kyxww"]
-[ext_resource type="Script" path="res://Scripts/TextureRect.gd" id="2_clpht"]
 [ext_resource type="PackedScene" uid="uid://dhkk5l5vvtcuu" path="res://Scenes/pause.tscn" id="3_ywa77"]
 [ext_resource type="PackedScene" uid="uid://b0infbaqn26f2" path="res://Scenes/profile.tscn" id="5_v30pu"]
 
@@ -20,12 +19,12 @@ theme = ExtResource("1_8fwxq")
 theme_override_fonts/font = ExtResource("1_kyxww")
 horizontal_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1152.0
 offset_bottom = 648.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("2_clpht")
+color = Color(1, 1, 1, 0)
 
 [node name="Pause" parent="." instance=ExtResource("3_ywa77")]
 
