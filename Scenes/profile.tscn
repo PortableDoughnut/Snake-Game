@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://7y6cvsqeay0h"]
+
+[ext_resource type="Theme" uid="uid://cefftfa4uuoua" path="res://menuTheme.tres" id="1_5ind5"]
+[ext_resource type="Script" path="res://Scripts/profile.gd" id="1_nnlqi"]
+
+[node name="Profile" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_nnlqi")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 274.0
+grow_vertical = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_5ind5")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer/CenterContainer"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/CenterContainer/ParallaxBackground"]
+
+[node name="Background" type="ColorRect" parent="CanvasLayer/CenterContainer/ParallaxBackground/ParallaxLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 456.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.470588, 0.388235, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CenterContainer"]
+layout_mode = 2
+theme = ExtResource("1_5ind5")
+
+[node name="LabelMargin" type="MarginContainer" parent="CanvasLayer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_5ind5")
+
+[node name="Shop" type="Label" parent="CanvasLayer/CenterContainer/VBoxContainer/LabelMargin"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Shop
+"
+
+[node name="ResumeMargin" type="MarginContainer" parent="CanvasLayer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_5ind5")
+
+[node name="Resume" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer/ResumeMargin"]
+layout_mode = 2
+theme = ExtResource("1_5ind5")
+action_mode = 0
+text = "Resume"
+
+[connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/ResumeMargin/Resume" to="." method="_on_resume_pressed"]

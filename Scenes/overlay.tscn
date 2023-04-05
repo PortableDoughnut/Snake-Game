@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://cefftfa4uuoua" path="res://menuTheme.tres" id="1_8fwxq"]
 [ext_resource type="FontFile" uid="uid://4aiy68hhb1ta" path="res://Fonts/NewRodin/NewRodin.otf" id="1_kyxww"]
 [ext_resource type="Script" path="res://Scripts/TextureRect.gd" id="2_clpht"]
-[ext_resource type="PackedScene" path="res://Scenes/pause.tscn" id="3_ywa77"]
+[ext_resource type="PackedScene" uid="uid://dhkk5l5vvtcuu" path="res://Scenes/pause.tscn" id="3_ywa77"]
 
 [node name="Overlay" type="CanvasLayer"]
 
