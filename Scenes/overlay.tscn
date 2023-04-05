@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bo7drj1fxk4ii"]
+[gd_scene load_steps=6 format=3 uid="uid://bo7drj1fxk4ii"]
 
 [ext_resource type="Theme" uid="uid://cefftfa4uuoua" path="res://menuTheme.tres" id="1_8fwxq"]
 [ext_resource type="FontFile" uid="uid://4aiy68hhb1ta" path="res://Fonts/NewRodin/NewRodin.otf" id="1_kyxww"]
 [ext_resource type="Script" path="res://Scripts/TextureRect.gd" id="2_clpht"]
-[ext_resource type="PackedScene" path="res://Scenes/pause.tscn" id="3_ywa77"]
+[ext_resource type="PackedScene" uid="uid://dhkk5l5vvtcuu" path="res://Scenes/pause.tscn" id="3_ywa77"]
+[ext_resource type="PackedScene" uid="uid://b0infbaqn26f2" path="res://Scenes/profile.tscn" id="5_v30pu"]
 
 [node name="Overlay" type="CanvasLayer"]
 
@@ -27,3 +28,6 @@ size_flags_vertical = 3
 script = ExtResource("2_clpht")
 
 [node name="Pause" parent="." instance=ExtResource("3_ywa77")]
+
+[node name="Profile" parent="." instance=ExtResource("5_v30pu")]
+visible = false
